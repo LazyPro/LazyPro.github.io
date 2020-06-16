@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Portfolio</title>
+    <link href = "styles.css" rel = "stylesheet">
+    <script src="jquery-3.4.1.min.js"></script>
+
+    <script>
+    	$(document).ready(function(){
+			$('.project-video').hide();
+			$('.project-area').mouseenter(function(){
+				$(this).find('.project-img').hide();			
+				$(this).find('.project-video').show();			
+			});
+			$('.project-area').mouseleave(function(){
+				$(this).find('.project-img').show();			
+				$(this).find('.project-video').hide();
+			});
+			$('.project-area').click(function(){
+				$(this).find('.project-img').hide();			
+				$(this).find('.project-video').show();			
+			});
+			
+			
+			var links = $('.nav-link');
+			
+			links.click(function(e){
+				e.preventDefault();
+				
+				$('body, html').animate({
+					scrollTop:$(this.hash).offset().top
+				}, 1000);
+			});		
+		});
+    </script>    
+    
+</head>
+<body>
+	<div class="container">
+    	<a href="#top" class="top-link nav-link"><img src="images/arrow-up.png" alt=""></a>
+		<div class="inner-container" id="top">
+			<div class="intro-content">
+				<img src="images/dp.jpg">
+				<div class="name-big"><h1>Muhammad Hassaan</h1></div>
+			</div>
+            <nav class="nav">
+            	<ul>
+            		<li><a href="#about" class="nav-link">About</a></li>
+            		<li><a href="#projects" class="nav-link">MyWork</a></li>
+            		<li><a href="#contact" class="nav-link">Contact</a></li>
+            	</ul>
+            </nav>
+		</div>
+    </div>
+    
+	<div class="container" id="about">
+		<div class="inner-container">
+        	<div class="about-area">
+            	<div class="projects-heading">
+                    <h1>Who am I?</h1>
+			
+                </div>
+				<p class="about-details ">
+                    My name is <span>Muhammad Hassaan</span>.<br><br>
+                    I am a self taught <span>PROGRAMMER</span>.
+
+                    <br>
+                    <br>                    
+                    
+                </p>
+                <br>
+                <br>
+                <div class="experties">
+					<h3>My areas of experties are:</h3>
+                	<ul class="main-list">
+                        <div class="listA">
+                            <li class="list1"><h4>Web Development</h4>
+                                <ul class="sublist">
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>Javascript</li>
+                                    <li>JQuery</li>
+                                    <li>PHP</li>
+                                    <li>Laravel</li>
+                                    <li>MySQL</li>	
+                                </ul>
+                            </li>                        
+                            
+                            <li class="list2"><h4>Game Development</h4>
+                                <ul class="sublist">
+                                    <li>Unity Engine</li>
+									<li>Unreal Engine (Beginner Level)</li>
+                                </ul>
+                            </li>
+                                                  
+                        </div>      
+                        
+                        <div class="listB">
+                        	<li class="list1"><h4>Programming Languages</h4>
+                                <ul class="sublist">
+                                    <li>Python</li>
+                                    <li>C#</li>
+                                    <li>C++</li>
+                                    <li>Javascript</li>
+                                    <li>Java</li>
+                                </ul>
+                            </li>
+                            
+							<li class="list2"><h4>Tools</h4>
+                                <ul class="sublist">
+                                	<li>Mixamo Fuse</li>
+                                    <li>Visual Studio</li>
+                                    <li>Dream Weaver</li>
+                                    <li>Netbeans</li>
+                                    <li>Eclipse</li>
+                                </ul>
+                            </li> 
+							
+                        </div>                  
+                	</ul>
+		
+                </div>                	   
+            <div class="about-others">
+            </div>
+            
+            <br><br><br><br>
+            
+		</div>
+    </div>
+    
+	<div class="container" id="projects">
+		<div class="inner-container">
+        	<div class="projects">
+            	<div class="projects-heading"><h1>My Work</h1></div>
+                
+                <section class="project-type section">
+					<h4 class="section-heading">Game Development</h4>
+                    <div class="project-area">
+                        <div class="project-media">
+                            <img src="images/projects/unity-fps1.jpg" alt="" class="project-img">
+                            <video src="images/projects/unity-fps1-video.mp4" class="project-video" controls autoplay loop></video>
+                        </div>
+                        <a target="_blank" href="https://github.com/BeInvincible/git-FirstPersonZombieShooter-Unity.git">View Source</a>
+                        <div class="project-details">
+                            <center><h4>Unity 3D, Unity C# scripting</h4></center>
+                            <br>
+                            A First Person Shooter developed in unity, contains a first person controller
+                            and a variety of weapons along with pick and drop mechanics, also contains
+                            zombie 	
+                            AI that has ability to find and attack player.
+                        </div>
+                    </div>                
+                    
+                    <div class="project-area">
+                        <div class="project-media">
+                            <img src="images/projects/unity-arcard.jpg" alt="" class="project-img">
+                            <video src="images/projects/unity-arcard-video.mp4" class="project-video" controls autoplay loop></video>
+                        </div>
+                        <a target="_blank" href="https://github.com/BeInvincible/git-AugmentedRealityCard-Unity.git">View Source</a>
+                        <div class="project-details">
+                            <center><h4>Unity 3D, Unity C# scripting</h4></center>
+                            <br>
+                            An Augmented Reality Card developed in Unity, contains basic animations and
+                            object detection mechanics also has a music player along with an audio visualizer
+                            that reacts on music beat.
+                        </div>
+                    </div>
+                    
+                    <div class="project-area">
+                        <div class="project-media">
+                            <img src="images/projects/unity-tpc-parkour.jpg" alt="" class="project-img">
+                            <img src="images/projects/unity-tpc-parkour-gif.gif" alt="" class="project-video">
+                        </div>
+                        <a target="_blank" href="https://github.com/BeInvincible/git-WatchDogsParkourMechanics-Unity.git">View Source</a>
+                        <div class="project-details">
+                            <center><h4>Unity 3D, Unity C# scripting</h4></center>
+                            <br>
+                            A Third Person Controller with Parkour mechanics.Player has ability to do basic
+                            movement like walk, run etc. and also has ability to detect objects in front of
+                            it and to interact in unique style depending on the height of object.
+                        </div>
+                    </div>
+                    
+                    <div class="project-area">
+                        <div class="project-media">
+                            <img src="images/projects/unity-tpc-car.jpg" alt="" class="project-img">
+                            <img src="images/projects/unity-tpc-car-gif.gif" alt="" class="project-video">
+                        </div>
+                        <a target="_blank" href="https://github.com/BeInvincible/git-GtaCarEnterExitMechanics-Unity.git">View Source</a>
+                        <div class="project-details">
+                            <center><h4>Unity 3D, Unity C# scripting</h4></center>
+                            <br>
+                            A Third Person Controller with ability to interact with vehicles(enter or exit)
+                            like in GTA.
+                        </div>
+                    </div>
+    
+                    <div class="project-area">
+                        <div class="project-media">
+                            <img src="images/projects/unity-tpc-dog.jpg" alt="" class="project-img">
+                            <img src="images/projects/unity-tpc-dog-gif.gif" alt="" class="project-video">
+                        </div>
+                        <a target="_blank" href="https://github.com/BeInvincible/git-GtaLikePlayerDogInteraction-Unity.git">View Source</a>
+                        <div class="project-details">
+                            <center><h4>Unity 3D, Unity C# scripting</h4></center>
+                            <br>
+                            A Third Person Controller having a pet dog and has ability to interact with
+                            his pet.
+                        </div>
+                    </div>                
+                    
+                    <div class="project-area">
+                        <div class="project-media">
+                            <img src="images/projects/unity-tpc-melee.jpg" alt="" class="project-img">
+                            <img src="images/projects/unity-tpc-melee-gif.gif" alt="" class="project-video">
+                        </div>
+                        <a target="_blank" href="https://github.com/BeInvincible/git-MeleeCombatMechanics-Unity.git">View Source</a>
+                        <div class="project-details">
+                            <center><h4>Unity 3D, Unity C# scripting</h4></center>
+                            <br>
+                            A Third Person Controller with melee combat mechanics.
+                        </div>
+                    </div>                
+
+                </section>                
+                
+                <section class="project-type section">
+                	<h4 class="section-heading">Web Development</h4>
+                    
+                    <div class="project-area">
+                        <div class="project-media">
+                            <img src="images/projects/web-php-quiz.png" alt="" class="project-img">
+                            <img src="images/projects/web-php-quiz-gif.gif" alt="" class="project-video">
+                        </div>
+                        <a target="_blank" href="https://github.com/BeInvincible/git-PhpQuizApp-web.git">View Source</a>
+                        <div class="project-details">
+                            <center><h4>HTML, CSS, Javascript, PHP, MySQL</h4></center>
+                            <br>
+                            A dynamic Quiz application developed using php and mysql, has three main
+                            entities Admin, Teacher and Student, each has its own functionalities.
+                        </div>
+                    </div>                                                      	
+                    
+                </section>
+                
+            </div>
+		</div>
+        <div class="end-projects"></div>
+    </div>
+	
+	<div class="contact-info" id="contact">
+        <div class="projects-heading">
+            <h1>Contact-Info</h1>
+        </div>
+        <div class="section">
+    	<div class="contact-other">
+            
+            <div class="contact">
+                <a target="_blank" href="https://www.linkedin.com/in/lazy-programmer">
+                	<img src="images/linkedin-logo.png" alt="Linked-In Profile">
+                </a>
+            </div>
+            
+            <div class="contact">
+                <a target="_blank" href="https://github.com/LazyPro">
+                	<img src="images/github-logo.png" alt="Github Profile">
+                </a>
+            </div>
+        </div>
+        
+        <div class="email">
+        	<img src="images/gmail-logo.png" alt="gmail">
+            <h3>lazy.pro.01@gmail.com</h3>
+        </div>         
+        </div>
+              
+    </div>
+</body>
+
+</html>
